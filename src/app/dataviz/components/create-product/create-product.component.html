@@ -1,0 +1,8 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<!-- div>label+input Emmet abbréviation-->
+    <div>
+        <label for="nom">Nom : </label>
+        <input type="text" id="nom" formControlName="name">
+    </div>
+    <input type="submit" value="Enregistrer">
+</form>
