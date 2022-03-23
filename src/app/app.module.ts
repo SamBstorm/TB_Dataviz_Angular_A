@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatavizRoutingModule } from './dataviz/dataviz-routing.module';
+import { DatavizModule } from './dataviz/dataviz.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DatavizRoutingModule } from './dataviz/dataviz-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DatavizRoutingModule
+    DatavizRoutingModule,
+    DatavizModule
   ],
   providers: [],
   bootstrap: [AppComponent]

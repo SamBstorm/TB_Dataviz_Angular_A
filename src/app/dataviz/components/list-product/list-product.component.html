@@ -1,0 +1,9 @@
+<a routerLink="/dataviz/product/new">
+    Ajouter un produit
+</a>
+<!-- ul>li>div Emmet abréviation -->
+<ul>
+    <li *ngFor="let prod of products">
+        <div>{{prod.name}}</div>
+    </li>
+</ul>

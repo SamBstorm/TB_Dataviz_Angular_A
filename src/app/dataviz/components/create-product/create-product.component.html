@@ -4,5 +4,24 @@
         <label for="nom">Nom : </label>
         <input type="text" id="nom" formControlName="name">
     </div>
-    <input type="submit" value="Enregistrer">
+    <!-- (div>label+textarea)+(div>label+input:number)+(div>label+select>option) -->
+    <div>
+        <label for="desc">
+            Description : 
+        </label>
+        <textarea id="desc" cols="30" rows="10" formControlName="description"></textarea>
+    </div>
+    <div>
+        <label for="price">Prix :</label>
+        <input type="number" id="price" formControlName="price">
+    </div>
+    <div>
+        <label for="cat">Catégories :</label>
+        <select id="cat" formControlName="categoryId">
+            <option *ngFor="let cat of categories" [value]="cat.id">
+                {{cat.name}}
+            </option>
+        </select>
+    </div>
+    <input type="submit" value="Enregistrer" [disabled]="!productForm.valid">
 </form>
